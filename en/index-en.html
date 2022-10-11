@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+
+<head>
+
+  <title>ITUC - Instituto Tecnológico da PUC-Rio</title>
+  <!-- Javascript e elementos diversos para todo o site PUC -->
+	
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <!-- Ícone -->
+  <link rel="shortcut icon" href="imagens/master/favicon.ico" type="image/x-icon" />
+
+
+  <!-- CSS PUC -->
+  <link href="https://www.puc-rio.br/styles/puc_interna.css" rel="stylesheet" type="text/css" />
+
+
+  <!-- EFEITO : JQUERY -->
+  <script src="https://www.puc-rio.br/js/jquery/jquery-3.1.1.min.js"></script>
+
+
+  <!-- EFEITO : POP-UP LIGHTBOX PARA ELEMENTOS DIVERSOS -->
+  <link href="https://www.puc-rio.br/js/puc_efeito_lity/dist/lity.css" rel="stylesheet">
+  <script src="https://www.puc-rio.br/js/puc_efeito_lity/dist/lity.js"></script>
+
+
+  <!-- EFEITO : APARECER E SUMIR -->
+  <script src="https://www.puc-rio.br/js/puc_efeito_aparecer_sumir/puc_efeito_aparecer_sumir.js"></script>
+
+
+  <!-- EFEITO : LUPA DA GALERIA DE IMAGENS -->
+  <script src="https://www.puc-rio.br/js/puc_efeito_vermaior/puc_efeito_vermaior.js"></script>
+
+
+  <!-- EFEITO : SLIDESHOW -->
+  <!-- #region Jssor Slider Begin -->
+  <!-- Generator: Jssor Slider Maker -->
+  <!-- Source: http://www.jssor.com -->
+  <!-- This code works with jquery library. -->
+  <script src="https://www.puc-rio.br/js/puc_efeito_slideshow/jssor.slider-21.1.6.mini.js"></script>
+
+  <script>
+
+    jQuery(document).ready(function ($) {
+
+      var jssor_1_SlideoTransitions = [
+        [{b:-1,d:1,o:-1},{b:0,d:100,o:1}],
+        [{b:1900,d:2000,x:-379,e:{x:7}}],
+        [{b:1900,d:2000,x:-379,e:{x:7}}],
+        [{b:-1,d:1,o:-1,r:288,sX:9,sY:9},{b:100,d:900,x:-1400,y:-660,o:1,r:-288,sX:-9,sY:-9,e:{r:6}},{b:1900,d:1600,x:-200,o:-1,e:{x:16}}]
+      ];
+
+      var jssor_1_options = {
+        $AutoPlay: true,
+        $SlideDuration: 100,
+        $SlideEasing: $Jease$.$OutQuint,
+        $CaptionSliderOptions: {
+        $Class: $JssorCaptionSlideo$,
+        $Transitions: jssor_1_SlideoTransitions
+        },
+        $ArrowNavigatorOptions: {
+        $Class: $JssorArrowNavigator$
+        },
+        $BulletNavigatorOptions: {
+        $Class: $JssorBulletNavigator$
+        }
+      };
+
+      var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+      /*responsive code begin*/
+      /*you can remove responsive code if you don't want the slider scales while window resizing*/
+      function ScaleSlider() {
+        var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+        if (refSize) {
+          refSize = Math.min(refSize, 3000);
+          jssor_1_slider.$ScaleWidth(refSize);
+        }
+        else {
+          window.setTimeout(ScaleSlider, 30);
+        }
+      }
+      ScaleSlider();
+      $(window).bind("load", ScaleSlider);
+      $(window).bind("resize", ScaleSlider);
+      $(window).bind("orientationchange", ScaleSlider);
+      /*responsive code end*/
+    });
+  </script>
+
+  <!-- / SLIDESHOW -->
+  <script>
+      
+		// Go trough every li with #gallerylink inside
+    $("li").each(function()
+    {
+      // Bind click event to it
+      $(this).parent().on("click", function()
+      {
+        // Click the link if the li is clicked
+        $(this).find("a")[0].click();
+      });
+    });
+    
+  </script>
+          
+  <!-- CSS específico do Manual -->
+  <link href="../css/estilos_ituc.css" rel="stylesheet" type="text/css" />
+
+  <!--Parceiros-->
+  <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .flex-container-div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .flex-container > p {
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      font-size: 30px;
+      border:2px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      height: 100px;
+    }
+
+    .flex-container > p:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: box-shadow 0.3s ease-in-out;
+      background-color: rgb(236, 236, 236);
+    }
+
+    @media (max-width:619px) {
+      .flex-container-div > div {
+        width: 100%;
+      }
+    }	
+  </style>
+    
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext,vietnamese');
+  </style>
+	
+  <!---slideshow-parallax--->
+  <script src="https://getuikit.com/v2/vendor/jquery.js"></script>
+  <link   rel="stylesheet" href="../efeitos/css/uikit.base.css" />
+  <link   rel="stylesheet" href="../efeitos/css/uikit.css" />
+  <link   rel="stylesheet" href="../efeitos/css/components/slideshow.almost-flat.min.css"/>
+  <link   rel="stylesheet" href="../efeitos/css/components/slidenav.min.css"/>
+  <link   rel="stylesheet" href="../efeitos/css/custom.css"/>
+
+	<script src="../efeitos/js/uikit.min.js"></script>
+
+  <script src="../efeitos/js/components/slideshow.min.js"></script>
+  <script src="../efeitos/js/components/slideshow-fx.min.js"></script>
+
+</head>
+
+
+<!-- ============================================================================== ABRE PÁGINA == -->
+
+
+<body id="ituc">
+
+
+  <!-- ===================================================================================== TOPO == -->
+  <!-- ============================================================================================= -->
+  <!-- ============================================================================================= -->
+
+
+  <header style="border-bottom: 10px solid #d78989;">
+      
+    <!-- Link acessibilidade, cabeçalho, brasão, título -->
+
+    <!-- Link acessibilidade -->
+    <a href="#link_pular_conteudo" id="puc_link_pular_para_conteudo">Skip to page content</a><span></span>
+
+    <!-- Cabeçalho PUC (busca e índice de A a Z) -->
+    <!--<iframe src="http://www.puc-rio.br/includes/puc_cabecalho.html" name="cabecalho" title="Cabeçalho PUC-Rio"></iframe>-->
+
+    <div id="puc_topo_brasao_titulo_caminho">
+
+      <!-- ITUC -->
+      <a href="#" target="_parent" title="Logo do ITUC" id="ituc_cabecalho_logo">
+      <img src="../imagens/master/ITUC.png" alt="Logo of the Technological Institute of PUC-Rio" /></a>
+
+      <div id="puc_topo_titulo_caminho">
+        <h1>Technological Institute of PUC-Rio – ITUC</h1>
+        <!-- fecha #puc_topo_titulo_caminho e #puc_topo_brasao_titulo_caminho no include do menu -->		
+        <!-- Caminho -->
+        <!--nav><a href="#">Include caminho</a></nav-->
+        <!-- Menu -->
+      </div><!-- fecha #puc_topo_titulo_caminho -->
+
+      <!-- Brasão PUC -->
+      <a href="http://www.puc-rio.br" target="_parent" title="Go to the homepage of the PUC-Rio website" id="puc_cabecalho_brasao">
+      <img src="http://www.puc-rio.br/imagens/bras_83x140_reduzido.png" alt="Coat of arms of PUC-Rio" /></a>
+
+    </div><!-- fecha #puc_topo_brasao_titulo_caminho -->
+
+    <!-- Para laytout sem menu
+    <div id="puc_menu_vazio"></div> -->
+
+    <!-- Para layout com menu -->
+    <div id="puc_menu_faixa">
+			<button type="button" onclick="javascript:efeito_aparecer_sumir_menu('menu')">Menu</button>
+			<div id="menu" class="puc_efeito_menu_sumir">
+			  <!-- linha acima menu --><span></span>
+	  
+			  <a href="index-en.html">home</a>
+			  
+			  <div class="puc_menu_submenu_conjunto">
+          <a href="#" class="puc_menu_submenu_linkmestre">institucional</a>
+          <ul class="puc_menu_submenu_links">	    
+            <li><a href="institutional/about-ituc.html">about-ituc</a></li>
+            <li><a href="institutional/team.html">team</a></li>
+            <li><a href="institutional/presentation.html">presentation</a></li>
+            <li><a href="institutional/documents.html">documents</a></li>
+          </ul>
+			  </div>
+	  
+			  <div class="puc_menu_submenu_conjunto" id="menu_labs">
+          <a href="#" class="puc_menu_submenu_linkmestre" style="text-transform: uppercase;">laboratories</a>
+          <ul class="puc_menu_submenu_links" id="puc_menu_submenu_labs">	    
+            <li><a href="https://www.cdev.com.br/">CDEV<br>Energy and Vehicle Development Center</a></li>
+            <li><a href="laboratories/digital-manufacturing.html" style="text-transform: uppercase;">digital manufacturing</a></li>
+            <li><a href="laboratories/mechanical-testing.html">LEM<br>Mechanical Testing Laboratory</a></li>
+            <li><a href="laboratories/dimensional-metrology.html">LMD<br>Dimensional Metrology Laboratory</a></li>
+          </ul>
+			  </div>
+	  
+			  <a href="services/services.html">services</a>
+	  
+			  <a href="projects/projects.html">projects</a>
+	  <!--
+			  <div class="puc_menu_submenu_conjunto">
+          <a href="#" class="puc_menu_submenu_linkmestre">informações</a>
+          <ul class="puc_menu_submenu_links"  id="puc_menu_submenu_inf">	    
+            <li><a href="informacoes/apresentacoes.html">apresentações</a></li>
+            <li><a href="informacoes/documentos.html">documentos</a></li>	
+          </ul>
+			  </div>-->
+        
+        <div class="puc_menu_submenu_conjunto">
+          <a href="#" class="puc_menu_submenu_linkmestre">news</a>
+          <ul class="puc_menu_submenu_links" id="puc_menu_submenu_news">
+            <li><a href="news/press.html">press</a></li>
+            <li><a href="news/newsletter.html"><i>newsletter</i></a></li>	
+          </ul>
+        </div>
+        
+        <a href="contact/contact.html">contact</a>
+
+        <a href="../index.html"><img src="../imagens/master/bra.png">portuguese</a>
+	  
+			  <!-- linha abaixo menu --><span></span>
+	  
+			</div><!-- fecha #menu -->
+		  </div><!-- fecha #puc_menu_faixa -->
+
+    <!-- Header -->
+
+    <!-- slideshow inicio -->
+    
+    <div class="uk-slidenav-position slide" data-uk-slideshow="{kenburns:true, autoplay:true, duration:'100'}">
+      <ul class="uk-slideshow">
+        <li>            
+          <img src="../efeitos/banner/banner_ituc_index_cdev.jpg" width="1420" height="450" alt="">
+          <div class="uk-overlay-panel uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+            <div>
+              <div class="container">
+                <a href="https://www.cdev.com.br/" class="btn btn-white btn-animated">KNOW MORE</a>
+              </div>
+            </div>
+          </div>            
+        </li>
+        <li>
+          <img src="../efeitos/banner/banner_ituc_index_fdigital.jpg" width="1420" height="450" alt="">
+          <div class="uk-overlay-panel uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+            <div>
+              <div class="container">
+                <a href="laboratories/digital-manufacturing.html" class="btn btn-white btn-animated">KNOW MORE</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="../efeitos/banner/banner_ituc_index_lem.png" width="1420" height="450" alt="">    
+          <div class="uk-overlay-panel uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+            <div>
+              <div class="container">
+                <a href="laboratories/mechanical-testing.html" class="btn btn-white btn-animated">KNOW MORE</a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" 
+        data-uk-slideshow-item="previous" style="color: rgba(255,255,255,1); text-decoration: none"></a>
+      <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next"     
+        data-uk-slideshow-item="next"     style="color: rgba(255,255,255,1); text-decoration: none"></a>
+
+    </div>
+    
+    <!-- slideshow fim -->
+
+  </header>
+
+
+
+
+
+  <!-- ===================================================================================== MEIO == -->
+  <!-- ============================================================================================= -->
+  <!-- ============================================================================================= -->
+
+
+    
+    
+  <section id="conteudo">
+
+
+  <!-- ================================================================== MEIO > COLUNA PRINCIPAL == -->
+  <!-- ============================================================================================= -->
+  <!-- ============================================================================================= -->
+
+
+  <!-- destino do link de acessibilidade "pular para conteúdo" -->
+  <a id="link_pular_conteudo"></a>
+
+
+  <article>
+
+    <!-- Apresentação -->
+
+  <div class="puc_layout_coluna_2cols_nivelador" id="ituc_apresentacao">
+
+    <div class="puc_layout_coluna_2cols_interno">
+      <a href="institutional/about-ituc.html">
+      <img src="../imagens/index/ituc_apresentacao.png"></a>
+    </div>
+
+    <div class="puc_layout_coluna_2cols_interno">
+      <a href="institutional/about-ituc.html">
+      <h3 class="ituc_tipo_apresentacao">the ituc</h3>
+      <p class="ituc_texto_apresentacao">The Technological Institute of PUC-Rio, ITUC, opened on April 12, 1959 under the name of Technological Institutes, has 61 years of activities dedicated to the provision of technological services to industry and other sectors of the economy. <br> <br> Our structure comprises two units in Rio de Janeiro, which house a qualified and multidisciplinary technical staff and our own network of laboratories. We have researchers, technicians, engineers, teachers, consultants and administrative staff prepared to seek excellent results for the most diverse segments.</p>
+      <span>know more</span></a>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <h3>highlights:</h3>
+    
+  <div class="puc_layout_coluna_3cols_nivelador" id="ituc_destaques">
+
+    <div class="puc_layout_coluna_3cols_interno">
+      <a href="https://www.cdev.com.br/">
+      <img src="../imagens/index/ituc_destaques_emissoes_motores_veiculos.png">
+      <p class="ituc_tipo_projetos">Energy and vehicles</p>
+      <p class="ituc_texto_projetos">Emissions tests on engines and vehicles, Chassis and engine dynamometers, Climate Chamber and others</p>
+      <span>know more</span></a>
+    </div>
+    
+    <div class="puc_layout_coluna_3cols_interno">
+      <a href="#">
+        <img src="../imagens/index/ituc_destaques_fabricacao_digital.jpg">
+      <p class="ituc_tipo_projetos">Additive manufacturing</p>
+      <p class="ituc_texto_projetos">3D printers capable of printing on stainless steel, tool steel, aluminum, titanium and others</p>
+      <span>know more</span></a>
+    </div>
+    
+    <div class="puc_layout_coluna_3cols_interno">
+      <a href="#">
+      <img src="../imagens/index/ituc_destaques_ensaios_mecanicos.jpg">
+      <p class="ituc_tipo_projetos">Mechanical tests</p>
+      <p class="ituc_texto_projetos">Calibration of force measuring instruments and testing machines, Characterization of mechanical behavior, Measurement of residual stresses in ducts and others</p>
+      <span>know more</span></a>
+    </div>
+    
+  </div>
+    
+  <hr>
+    
+  <h3>Partners / Clients:</h3>
+
+  <div class="flex-container">
+
+    <p><img src="../imagens/index/parceiros/br2w.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/brasilamarras.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/eletrobras.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/faperj.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/fbts.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/guascor.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/fiat.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/finep.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/inmetro.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/int.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/lettec.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/lndc.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/petrobras.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/psa.png"  alt=""/></p>
+    <p><img src="../imagens/index/parceiros/renault.png" alt=""/></p>
+    <p><img src="../imagens/index/parceiros/sdrill.png" alt=""/></p>
+    <p><img src="../imagens/index/parceiros/senai.png" alt=""/></p>
+    <p><img src="../imagens/index/parceiros/tap.png" alt=""/></p>
+    <p><img src="../imagens/index/parceiros/tenaris.png" alt=""/></p>
+    <p><img src="../imagens/index/parceiros/total.png" alt=""/></p>
+
+  </div>
+
+  <hr>
+
+  </article>
+
+
+  <!-- ==================================================================== MEIO > COLUNA LATERAL == -->
+  <!-- ============================================================================================= -->
+  <!-- ============================================================================================= -->
+
+
+  <aside>
+  </aside>
+
+
+  <!-- =============================================================================== FECHA MEIO == -->
+
+
+  </section>
+
+
+  <!-- =================================================================================== RODAPE == -->
+  <!-- ============================================================================================= -->
+  <!-- ============================================================================================= -->
+
+
+  <footer>
+
+    <!-- Rodapé PUC -->
+
+    <div id="ituc_footer">
+      <div id="ituc_infos" class="puc_layout_coluna_3cols_nivelador" style="text-align:center">
+
+        <div class="puc_layout_coluna_3cols_interno">
+          <h5>Technological Institute of PUC-Rio </h5>
+          <p> Rua Marquês de São Vicente, nº 225, <br>
+          Fr. José Laércio de Lima Building. SJ, 4th floor, Gávea - CEP 22451-900 <br />
+          Rio de Janeiro - RJ - BRAZIL</p>
+        </div>       
+
+        <div class="puc_layout_coluna_3cols_interno">
+          <h5>Office Hours </h5>
+          <p> Monday to Friday: <br>
+          08:00h to 17:30h</p>			
+        </div>
+
+        <div class="puc_layout_coluna_3cols_interno">
+          <h5>Contact us </h5>
+          <p> Tel: (21) 3527-1535 / 1536 <br>
+          E-mail: ituc@puc-rio.br</p>			
+        </div>
+
+      </div>
+    </div>
+    <iframe src="http://www.puc-rio.br/includes/puc_rodape.html" name="rodape" 
+    title="Rodapé PUC-Rio - endereço e copyright"></iframe>
+
+  </footer>
+
+  <!-- ========================================= FECHA PAGINA ====================================== -->
+
+</body>
+</html>

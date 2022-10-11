@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+
+<head>
+
+	<title>ITUC - Institucional</title>
+	
+	<!-- Javascript e elementos diversos para todo o site PUC -->
+			
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Ícone -->
+	<link rel="shortcut icon" href="../imagens/master/favicon.ico" type="image/x-icon" />
+
+	<!-- CSS PUC -->
+	<link href="https://www.puc-rio.br/styles/puc_interna.css" rel="stylesheet" type="text/css" />
+
+
+	<!-- EFEITO : JQUERY -->
+	<script src="https://www.puc-rio.br/js/jquery/jquery-3.1.1.min.js"></script>
+
+
+	<!-- EFEITO : POP-UP LIGHTBOX PARA ELEMENTOS DIVERSOS -->
+	<link href="https://www.puc-rio.br/js/puc_efeito_lity/dist/lity.css" rel="stylesheet">
+	<script src="https://www.puc-rio.br/js/puc_efeito_lity/dist/lity.js"></script>
+
+
+	<!-- EFEITO : APARECER E SUMIR -->
+	<script src="https://www.puc-rio.br/js/puc_efeito_aparecer_sumir/puc_efeito_aparecer_sumir.js"></script>
+
+
+	<!-- EFEITO : LUPA DA GALERIA DE IMAGENS -->
+	<script src="https://www.puc-rio.br/js/puc_efeito_vermaior/puc_efeito_vermaior.js"></script>
+
+
+	<!-- EFEITO : SLIDESHOW -->
+	<!-- #region Jssor Slider Begin -->
+	<!-- Generator: Jssor Slider Maker -->
+	<!-- Source: http://www.jssor.com -->
+	<!-- This code works with jquery library. -->
+	<script src="https://www.puc-rio.br/js/puc_efeito_slideshow/jssor.slider-21.1.6.mini.js"></script>
+
+	<script>
+
+		jQuery(document).ready(function ($) {
+
+			var jssor_1_SlideoTransitions = [
+				[{b:-1,d:1,o:-1},{b:0,d:1000,o:1}],
+				[{b:1900,d:2000,x:-379,e:{x:7}}],
+				[{b:1900,d:2000,x:-379,e:{x:7}}],
+				[{b:-1,d:1,o:-1,r:288,sX:9,sY:9},{b:1000,d:900,x:-1400,y:-660,o:1,r:-288,sX:-9,sY:-9,e:{r:6}},{b:1900,d:1600,x:-200,o:-1,e:{x:16}}]
+			];
+
+			var jssor_1_options = {
+				$AutoPlay: true,
+				$SlideDuration: 1000,
+				$SlideEasing: $Jease$.$OutQuint,
+				$CaptionSliderOptions: {
+						$Class: $JssorCaptionSlideo$,
+						$Transitions: jssor_1_SlideoTransitions
+				},
+				$ArrowNavigatorOptions: {
+						$Class: $JssorArrowNavigator$
+				},
+				$BulletNavigatorOptions: {
+						$Class: $JssorBulletNavigator$
+				}
+			};
+
+			var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+			/*responsive code begin*/
+			/*you can remove responsive code if you don't want the slider scales while window resizing*/
+			function ScaleSlider() {
+				var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+				if (refSize) {
+						refSize = Math.min(refSize, 3000);
+						jssor_1_slider.$ScaleWidth(refSize);
+				}
+				else {
+						window.setTimeout(ScaleSlider, 30);
+				}
+			}
+
+			ScaleSlider();
+			$(window).bind("load", ScaleSlider);
+			$(window).bind("resize", ScaleSlider);
+			$(window).bind("orientationchange", ScaleSlider);
+			/*responsive code end*/
+		});
+
+	</script>
+
+	<!-- / SLIDESHOW -->
+					
+	<!-- CSS específico do Manual -->
+
+	<link href="../css/estilos_ituc.css" rel="stylesheet" type="text/css" />
+
+	<style>
+		@media (max-width:619px) {
+
+			.bk_topper .background-gradient {
+				height: 100px;
+			}
+		}
+	</style>
+			
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext,vietnamese');
+	</style>
+
+	<!---parallax--->
+	<link   rel="stylesheet" href="../efeitos/css/uikit-core.css" />
+	<script src="../efeitos/js/uikit.js"></script>
+	<script src="../efeitos/js/uikit.min.js"></script>
+	<script src="../efeitos/js/uikit-icons.js"></script>
+	<script src="../efeitos/js/uikit-icons.min.js"></script>
+
+</head>
+
+
+<!-- ============================================================================== ABRE PÁGINA == -->
+
+
+<body id="ituc">
+
+
+	<!-- ===================================================================================== TOPO == -->
+	<!-- ============================================================================================= -->
+	<!-- ============================================================================================= -->
+
+
+	<header style="border-bottom: 10px solid #d78989;">
+
+    
+		<!-- Link acessibilidade, cabeçalho, brasão, título -->
+	
+	
+		<!-- Link acessibilidade -->
+		<a href="#link_pular_conteudo" id="puc_link_pular_para_conteudo">Pular para o conteúdo da página</a><span></span>
+	
+		<!-- Cabeçalho PUC (busca e índice de A a Z) -->
+		<!--<iframe src="http://www.puc-rio.br/includes/puc_cabecalho.html" name="cabecalho" title="Cabeçalho PUC-Rio"></iframe>-->
+	
+	
+	
+		<div id="puc_topo_brasao_titulo_caminho">
+
+			<!-- ITUC -->
+			<a href="#" target="_parent" title="Logo do ITUC" id="ituc_cabecalho_logo">
+			<img src="../imagens/master/ITUC.png" alt="Logo do Instituto Tecnológico da PUC-Rio" /></a>
+	  
+			<div id="puc_topo_titulo_caminho">
+			  <h1>Instituto Tecnológico da PUC-Rio – ITUC</h1>
+			  <!-- fecha #puc_topo_titulo_caminho e #puc_topo_brasao_titulo_caminho no include do menu -->		
+			  <!-- Caminho -->
+			  <!--nav><a href="#">Include caminho</a></nav-->
+			  <!-- Menu -->
+			</div><!-- fecha #puc_topo_titulo_caminho -->
+	  
+			<!-- Brasão PUC -->
+			<a href="http://www.puc-rio.br" target="_parent" title="Ir para a página inicial do site PUC-Rio" id="puc_cabecalho_brasao">
+			<img src="http://www.puc-rio.br/imagens/bras_83x140_reduzido.png" alt="Brasão da PUC-Rio" /></a>
+	  
+		</div><!-- fecha #puc_topo_brasao_titulo_caminho -->
+	
+		<!-- Para laytout sem menu
+		<div id="puc_menu_vazio"></div> -->
+	
+		<!-- Para layout com menu -->
+		<div id="puc_menu_faixa">
+			<button type="button" onclick="javascript:efeito_aparecer_sumir_menu('menu')">Menu</button>
+			<div id="menu" class="puc_efeito_menu_sumir">
+			  <!-- linha acima menu --><span></span>
+	  
+			  <a href="../index.html">início</a>
+			  
+			  <div class="puc_menu_submenu_conjunto">
+          <a href="#" class="puc_menu_submenu_linkmestre">institucional</a>
+          <ul class="puc_menu_submenu_links">	    
+            <li><a href="../institucional/sobre-o-ituc.html">sobre o ituc</a></li>
+			<li><a href="../institucional/equipe.html">equipe</a></li>
+			<li><a href="../institucional/apresentacoes.html">apresentações</a></li>
+			<li><a href="../institucional/documentos.html">documentos</a></li>
+          </ul>
+			  </div>
+	  
+			  <div class="puc_menu_submenu_conjunto" id="menu_labs">
+				<a href="#" class="puc_menu_submenu_linkmestre" style="text-transform: uppercase;">laboratórios</a>
+				<ul class="puc_menu_submenu_links" id="puc_menu_submenu_labs">	    
+				  <li><a href="https://www.cdev.com.br/">CDEV<br>Centro de Desenvolvimento em Energia e Veículos</a></li>
+				  <li><a href="../laboratorios/fabricacao-digital.html" style="text-transform: uppercase;">fabricação digital</a></li>
+				  <li><a href="../laboratorios/ensaios-mecanicos.html">LEM<br>Laboratório de Ensaios Mecânicos</a></li>
+				  <li><a href="../laboratorios/metrologia-dimensional.html">LMD<br>Laboratório de Metrologia Dimensional</a></li>
+				</ul>
+					</div>
+			
+					<a href="../servicos/servicos.html">serviços</a>
+			
+					<a href="../projetos/projetos.html">projetos</a>
+			<!--
+					<div class="puc_menu_submenu_conjunto">
+						<a href="#" class="puc_menu_submenu_linkmestre">informações</a>
+						<ul class="puc_menu_submenu_links"  id="puc_menu_submenu_inf">	    
+						<li><a href="../informacoes/apresentacoes.html">apresentações</a></li>
+						<li><a href="../informacoes/documentos.html">documentos</a></li>	
+						</ul>
+					</div>-->
+			  
+			  <div class="puc_menu_submenu_conjunto">
+				<a href="#" class="puc_menu_submenu_linkmestre">notícias</a>
+				<ul class="puc_menu_submenu_links" id="puc_menu_submenu_noticias">
+				  <li><a href="../noticias/imprensa.html">imprensa</a></li>
+				  <li><a href="../noticias/newsletter.html"><i>newsletter</i></a></li>	
+				</ul>
+			  </div>
+	  
+			  <a href="../contato/contato.html">contato</a>
+
+			  <a href="index-en.html"><img src="../imagens/master/usa.png">English</a>
+	  
+			  <!-- linha abaixo menu --><span></span>
+	  
+			</div><!-- fecha #menu -->
+		</div><!-- fecha #puc_menu_faixa -->
+
+		<ul class="bk_topper">
+			<li><img src="../efeitos/banner/banner_ituc_institucional_cdev.png" style="width: 100%"></li>
+			<!--li class="background-black"></li-->
+			<li class="background-gradient"></li>
+		</ul>
+
+	</header>
+
+
+	<!-- ===================================================================================== MEIO == -->
+	<!-- ============================================================================================= -->
+	<!-- ============================================================================================= -->
+			
+			
+	<section class="internas" id="conteudo">
+
+
+	<!-- ================================================================== MEIO > COLUNA PRINCIPAL == -->
+	<!-- ============================================================================================= -->
+	<!-- ============================================================================================= -->
+
+
+	<!-- destino do link de acessibilidade "pular para conteúdo" -->
+	<a id="link_pular_conteudo"></a>
+
+
+	<article>
+
+		<h2>Institucional</h2>
+
+		<div class="puc_layout_coluna_2cols_nivelador" id="ituc_apresentacao">
+			<div class="puc_layout_coluna_2cols_interno">                
+				<p class="ituc_texto_apresentacao"><br>O Instituto Tecnológico da PUC-Rio, ITUC, inaugurado em 12 de abril de 1959 com o nome de Institutos Tecnológicos, dedica-se à prestação de serviços tecnológicos, tanto em apoio às atividades acadêmicas do CTC (Centro Técnico Científico) e de outros centros da PUC-Rio, como em atendimento à indústria e a outros setores da economia.</p>
+				<p class="ituc_texto_apresentacao"><br>Ao longo desses anos, o ITUC tem procurado adequar o seu perfil de atuação, de modo a acompanhar as transformações pelas quais têm passado a universidade e o país, e conseqüentemente a demanda por seus serviços. Nessa trajetória, o Instituto acumulou experiência e competência em serviços, consultoria e projetos de desenvolvimento de tecnologia, realizados tanto de forma autônoma, como em parceria com outros departamentos da PUC, outras universidades, centros de tecnologia, órgãos de governo e empresas privadas. Essas atividades vêm se intensificando desde a década de 60, poucos anos após a sua criação, evidenciando a flexibilidade e agilidade do Instituto em se adequar às necessidades de cada fase do processo de desenvolvimento tecnológico brasileiro, característica marcante de sua atuação.</p>
+			</div>
+			
+			<div class="puc_layout_coluna_2cols_interno">
+				<div
+					class="uk-height-large uk-background-cover uk-margin uk-overflow-hidden uk-light uk-flex uk-flex-top" 
+					style="background-image: url(../imagens/institucional/sobre_o_ituc/sobre_apresentacao.png); height: 420px; margin-top: 40px;
+					background-repeat: no-repeat; background-size: 1418px 451px; background-position: bottom; background-position-y: calc(-50px);" 
+					uk-parallax="bgx: -400">
+				</div>
+			</div>
+			
+		</div>
+
+		<div id="ituc_apresentacao">
+			<p class="ituc_texto_apresentacao"><br>Outra característica importante é a capacidade de nuclear empreendimentos novos na universidade. Nesse aspecto, o ITUC atua fornecendo suporte tecnológico, administrativo, político e financeiro, através de projetos patrocinados, para o surgimento de novos negócios que, com o passar do tempo, atingem maturidade e autonomia.</p>
+			<p class="ituc_texto_apresentacao"><br>Nos anos compreendidos pela década de 1990, até 2007, há exemplos relevantes de projetos de desenvolvimento de tecnologia ou novos empreendimentos, alguns já concluídos, ou já tendo alcançado sua autonomia, outros ainda em andamento. Dentre eles, pode-se citar: a Incubadora de Empresas Gênesis, o Mestrado em Metrologia, o Instituto de Energia (IEPUC), os Materiais de Referência (padrões) para Dureza e Impacto, a Certificação de Próteses Femorais, o Centro de Avaliação Não Destrutiva e o Centro de Desenvolvimento em Energia e Veicular.</p>
+			<p class="ituc_texto_apresentacao"><br>O Instituto Tecnológico é uma unidade com atuação abrangente, que gera recursos, conhecimento e projeção para a PUC-Rio, com potencial para realizações de maior porte, sob condições adequadas de apoio e investimento.</p>
+			<p class="ituc_texto_apresentacao"><br>O ITUC possui características distintas dos demais departamentos do CTC (Centro Técnico Científico), uma vez que sua principal atribuição regimental é a prestação de serviços. A estrutura operacional do Instituto tem sido aperfeiçoada no sentido de desempenhar adequadamente essa função.</p>
+			<p class="ituc_texto_apresentacao"><br>A fim de satisfazer à sua tarefa regimental e atender às necessidades do mercado, o ITUC necessita manter seus laboratórios, instalações e pessoal (técnico e administrativo) operando segundo normas e padrões exigidos pelo Inmetro (Instituto Nacional de Metrologia, Normalização e Qualidade Industrial), órgão responsável pela acreditação dos serviços de metrologia do ITUC. Isso implica em ter e manter atualizado um Manual de Qualidade de serviços laboratoriais que, como conseqüência, reflete na qualidade de todos os serviços, mesmo aqueles prestados aos departamentos da PUC.</p>
+			<p class="ituc_texto_apresentacao"><br>Ainda em razão da necessidade de atender à demanda por serviços de tecnologia, o ITUC desenvolveu sua capacidade de agregar competências, por conhecer bem de perto as atividades de diversos departamentos do CTC e mesmo de outros centros, e também por dispor de uma administração acostumada a interagir com os órgãos internos da universidade, departamentos e empresas, no que concerne à prestação de serviços. Essa característica é potencialmente importante para se somar a outros esforços do CTC com objetivo de captar projetos, serviços e receita no meio externo.</p>
+			<p class="ituc_texto_apresentacao"><br>Um aspecto importante que surge desse perfil de atividades, ao se considerar a inserção do ITUC no contexto da universidade, é a contribuição para a formação dos alunos. Por ter que conciliar o atendimento à sua clientela de serviços com a demanda acadêmica, o ITUC assume papel importante, perante os alunos, em duas vertentes: a primeira, durante a fase de aprendizado, ao permitir aos alunos que tenham contato com atividades profissionais dentro da escola, podendo perceber as diferenças e complexidades da aplicação dos conhecimentos que estão sendo aprendidos; a segunda, pelo prestígio que uma atividade dessa natureza traz para uma universidade, criando um vínculo com seus alunos após sua formatura o que, como inúmeros casos comprovam, ocasiona o retorno futuro desses alunos como demandantes de serviços ou como empresas incubadas.</p>
+		</div>
+				
+		<!-- Botão voltar -->
+
+		<button onclick="javascript:history.back()" class="puc_link_voltar_TAG-BUTTON" title="Voltar">VOLTAR</button>
+		<hr>
+	</article>
+
+
+
+
+
+	<!-- ==================================================================== MEIO > COLUNA LATERAL == -->
+	<!-- ============================================================================================= -->
+	<!-- ============================================================================================= -->
+
+
+	<aside>
+
+	<!-- <p>Veja também:</p>
+	<p>&nbsp;</p> -->
+
+	</aside>
+
+
+
+
+
+	<!-- =============================================================================== FECHA MEIO == -->
+
+
+	</section>
+
+
+	<!-- =================================================================================== RODAPÉ == -->
+	<!-- ============================================================================================= -->
+	<!-- ============================================================================================= -->
+
+
+	<footer>
+
+		<!-- Rodapé PUC -->
+	
+		<div id="ituc_footer">
+		  <div id="ituc_infos" class="puc_layout_coluna_3cols_nivelador" style="text-align:center">
+	
+			<div class="puc_layout_coluna_3cols_interno">
+			  <h5>Instituto Tecnológico da PUC-Rio</h5>
+			  <p>Rua Marquês de São Vicente, nº 225,<br>
+			  Prédio Pe. José Laércio de Lima. SJ, 4º andar, Gávea - CEP 22451-900<br />
+			  Rio de Janeiro - RJ - BRASIL</p>
+			</div>       
+	
+			<div class="puc_layout_coluna_3cols_interno">
+			  <h5>Horário de Atendimento</h5>
+			  <p>Segunda a Sexta-feira:<br>
+			  08:00h às 17:30h</p>			
+			</div>
+	
+			<div class="puc_layout_coluna_3cols_interno">
+			  <h5>Fale conosco</h5>
+			  <p>Tel: (21) 3527-1535 / 1536<br>
+			  E-mail: ituc@puc-rio.br</p>			
+			</div>
+	
+		  </div>
+		</div>
+		<iframe src="http://www.puc-rio.br/includes/puc_rodape.html" name="rodape" 
+		title="Rodapé PUC-Rio - endereço e copyright"></iframe>
+	
+	  </footer>
+
+
+
+	<!-- ============================================================================= FECHA PÁGINA == -->
+
+</body>
+</html>

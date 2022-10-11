@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+
+<head>
+
+	<title>ITUC - Equipe</title>
+	
+	<!-- Javascript e elementos diversos para todo o site PUC -->
+			
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Ícone -->
+	<link rel="shortcut icon" href="../imagens/master/favicon.ico" type="image/x-icon" />
+
+	<!-- CSS PUC -->
+	<link href="https://www.puc-rio.br/styles/puc_interna.css" rel="stylesheet" type="text/css" />
+
+
+	<!-- EFEITO : JQUERY -->
+	<script src="https://www.puc-rio.br/js/jquery/jquery-3.1.1.min.js"></script>
+
+
+	<!-- EFEITO : POP-UP LIGHTBOX PARA ELEMENTOS DIVERSOS -->
+	<link href="https://www.puc-rio.br/js/puc_efeito_lity/dist/lity.css" rel="stylesheet">
+	<script src="https://www.puc-rio.br/js/puc_efeito_lity/dist/lity.js"></script>
+
+
+	<!-- EFEITO : APARECER E SUMIR -->
+	<script src="https://www.puc-rio.br/js/puc_efeito_aparecer_sumir/puc_efeito_aparecer_sumir.js"></script>
+
+
+	<!-- EFEITO : LUPA DA GALERIA DE IMAGENS -->
+	<script src="https://www.puc-rio.br/js/puc_efeito_vermaior/puc_efeito_vermaior.js"></script>
+
+
+	<!-- EFEITO : SLIDESHOW -->
+	<!-- #region Jssor Slider Begin -->
+	<!-- Generator: Jssor Slider Maker -->
+	<!-- Source: http://www.jssor.com -->
+	<!-- This code works with jquery library. -->
+	<script src="https://www.puc-rio.br/js/puc_efeito_slideshow/jssor.slider-21.1.6.mini.js"></script>
+
+	<script>
+
+		jQuery(document).ready(function ($) {
+
+			var jssor_1_SlideoTransitions = [
+				[{b:-1,d:1,o:-1},{b:0,d:1000,o:1}],
+				[{b:1900,d:2000,x:-379,e:{x:7}}],
+				[{b:1900,d:2000,x:-379,e:{x:7}}],
+				[{b:-1,d:1,o:-1,r:288,sX:9,sY:9},{b:1000,d:900,x:-1400,y:-660,o:1,r:-288,sX:-9,sY:-9,e:{r:6}},{b:1900,d:1600,x:-200,o:-1,e:{x:16}}]
+			];
+
+			var jssor_1_options = {
+				$AutoPlay: true,
+				$SlideDuration: 1000,
+				$SlideEasing: $Jease$.$OutQuint,
+				$CaptionSliderOptions: {
+				$Class: $JssorCaptionSlideo$,
+				$Transitions: jssor_1_SlideoTransitions
+				},
+				$ArrowNavigatorOptions: {
+				$Class: $JssorArrowNavigator$
+				},
+				$BulletNavigatorOptions: {
+				$Class: $JssorBulletNavigator$
+				}
+			};
+
+			var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+			/*responsive code begin*/
+			/*you can remove responsive code if you don't want the slider scales while window resizing*/
+			function ScaleSlider() {
+				var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+				if (refSize) {
+					refSize = Math.min(refSize, 3000);
+					jssor_1_slider.$ScaleWidth(refSize);
+				}
+				else {
+					window.setTimeout(ScaleSlider, 30);
+				}
+			}
+			ScaleSlider();
+			$(window).bind("load", ScaleSlider);
+			$(window).bind("resize", ScaleSlider);
+			$(window).bind("orientationchange", ScaleSlider);
+			/*responsive code end*/
+		});
+	</script>
+
+	<!-- / SLIDESHOW -->
+
+	<!-- CSS específico do Manual -->
+	<link href="../css/estilos_ituc.css" rel="stylesheet" type="text/css" />
+		
+	<style>
+		
+		#ituc_equipe div {
+			box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+			transition: box-shadow 0.3s ease-in-out;
+		}
+		
+		#ituc_equipe div.none {
+			box-shadow: none;
+		}
+
+
+		#ituc_equipe div:hover {		
+			box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		}
+		
+		#ituc_equipe div.none:hover {			
+			box-shadow:none;
+		}
+			
+			
+		#ituc_equipe div{
+			text-align: center;
+						/*box-shadow: 0 3px 8px #888;*/
+			padding-bottom: 20px;
+			position: relative
+		}
+
+		#ituc_equipe div a:link,
+		#ituc_equipe div a:visited,
+		#ituc_equipe div a:hover{
+			display:block;
+			cursor: pointer;
+			text-decoration: none;
+			color: #555;
+		}
+
+		.ituc_texto_projetos{
+			padding: 0 10px
+		}
+
+		.ituc_tipo_projetos{
+			display: block;
+			font-family: 'Roboto Condensed';
+			font-size: 2.0em;
+			color: #666;
+			line-height: 1em;
+			margin-top: 20px;
+		}
+
+		#ituc_equipe span {
+			display: block;
+			text-align: right;
+			font-weight: 700;
+			color:#a31212;
+			position: absolute;
+			bottom: 5px;
+			right: 15px;
+		}
+
+	</style>
+		
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext,vietnamese');
+	</style>
+
+	<!---parallax--->
+	<link   rel="stylesheet" href="../efeitos/css/uikit-core.css" />
+
+</head>
+
+
+<!-- ============================================================================== ABRE PÁGINA == -->
+
+
+<body id="ituc">
+
+
+<!-- ===================================================================================== TOPO == -->
+<!-- ============================================================================================= -->
+<!-- ============================================================================================= -->
+
+
+<header>
+	
+	<!-- Link acessibilidade, cabeçalho, brasão, título -->
+
+	<!-- Link acessibilidade -->
+	<a href="#link_pular_conteudo" id="puc_link_pular_para_conteudo">Pular para o conteúdo da página</a><span></span>
+
+	<!-- Cabeçalho PUC (busca e índice de A a Z) -->
+	<!--<iframe src="http://www.puc-rio.br/includes/puc_cabecalho.html" name="cabecalho" title="Cabeçalho PUC-Rio"></iframe>-->
+
+	<div id="puc_topo_brasao_titulo_caminho">
+
+		<!-- ITUC -->
+		<a href="#" target="_parent" title="Logo do ITUC" id="ituc_cabecalho_logo">
+		<img src="../imagens/master/ITUC.png" alt="Logo do Instituto Tecnológico da PUC-Rio" /></a>
+  
+		<div id="puc_topo_titulo_caminho">
+		  <h1>Instituto Tecnológico da PUC-Rio – ITUC</h1>
+		  <!-- fecha #puc_topo_titulo_caminho e #puc_topo_brasao_titulo_caminho no include do menu -->		
+		  <!-- Caminho -->
+		  <!--nav><a href="#">Include caminho</a></nav-->
+		  <!-- Menu -->
+		</div><!-- fecha #puc_topo_titulo_caminho -->
+  
+		<!-- Brasão PUC -->
+		<a href="http://www.puc-rio.br" target="_parent" title="Ir para a página inicial do site PUC-Rio" id="puc_cabecalho_brasao">
+		<img src="http://www.puc-rio.br/imagens/bras_83x140_reduzido.png" alt="Brasão da PUC-Rio" /></a>
+  
+	</div><!-- fecha #puc_topo_brasao_titulo_caminho -->
+
+
+	<!-- Para laytout sem menu
+	<div id="puc_menu_vazio"></div> -->
+
+
+	<!-- Para layout com menu -->
+	<div id="puc_menu_faixa">
+		<button type="button" onclick="javascript:efeito_aparecer_sumir_menu('menu')">Menu</button>
+		<div id="menu" class="puc_efeito_menu_sumir">
+		  <!-- linha acima menu --><span></span>
+  
+		  <a href="../index.html">início</a>
+		  
+		  <div class="puc_menu_submenu_conjunto">
+	  <a href="#" class="puc_menu_submenu_linkmestre">institucional</a>
+	  <ul class="puc_menu_submenu_links">	    
+		<li><a href="../institucional/sobre-o-ituc.html">sobre o ituc</a></li>
+		<li><a href="../institucional/equipe.html">equipe</a></li>
+		<li><a href="../institucional/apresentacoes.html">apresentações</a></li>
+		<li><a href="../institucional/documentos.html">documentos</a></li>
+	  </ul>
+		  </div>
+  
+		  <div class="puc_menu_submenu_conjunto" id="menu_labs">
+			<a href="#" class="puc_menu_submenu_linkmestre" style="text-transform: uppercase;">laboratórios</a>
+			<ul class="puc_menu_submenu_links" id="puc_menu_submenu_labs">	    
+			  <li><a href="https://www.cdev.com.br/">CDEV<br>Centro de Desenvolvimento em Energia e Veículos</a></li>
+			  <li><a href="../laboratorios/fabricacao-digital.html" style="text-transform: uppercase;">fabricação digital</a></li>
+			  <li><a href="../laboratorios/ensaios-mecanicos.html">LEM<br>Laboratório de Ensaios Mecânicos</a></li>
+			  <li><a href="../laboratorios/metrologia-dimensional.html">LMD<br>Laboratório de Metrologia Dimensional</a></li>
+			</ul>
+				</div>
+		
+				<a href="../servicos/servicos.html">serviços</a>
+		
+				<a href="../projetos/projetos.html">projetos</a>
+		<!--
+				<div class="puc_menu_submenu_conjunto">
+					<a href="#" class="puc_menu_submenu_linkmestre">informações</a>
+					<ul class="puc_menu_submenu_links"  id="puc_menu_submenu_inf">	    
+					<li><a href="../informacoes/apresentacoes.html">apresentações</a></li>
+					<li><a href="../informacoes/documentos.html">documentos</a></li>	
+					</ul>
+				</div>-->
+		  
+		  <div class="puc_menu_submenu_conjunto">
+			<a href="#" class="puc_menu_submenu_linkmestre">notícias</a>
+			<ul class="puc_menu_submenu_links" id="puc_menu_submenu_noticias">
+			  <li><a href="../noticias/imprensa.html">imprensa</a></li>
+			  <li><a href="../noticias/newsletter.html"><i>newsletter</i></a></li>	
+			</ul>
+		  </div>
+  
+		  <a href="../contato/contato.html">contato</a>
+
+		  <a href="index-en.html"><img src="../imagens/master/usa.png">English</a>
+  
+		  <!-- linha abaixo menu --><span></span>
+  
+		</div><!-- fecha #menu -->
+	</div><!-- fecha #puc_menu_faixa -->
+
+</header>
+
+
+<!-- ===================================================================================== MEIO == -->
+<!-- ============================================================================================= -->
+<!-- ============================================================================================= -->
+	
+	
+<section id="conteudo">
+
+
+	<!-- ================================================================== MEIO > COLUNA PRINCIPAL == -->
+	<!-- ============================================================================================= -->
+	<!-- ============================================================================================= -->
+
+
+	<!-- destino do link de acessibilidade "pular para conteúdo" -->
+	<a id="link_pular_conteudo"></a>
+
+	<article>
+
+	<h2>Equipe</h2>
+	
+	<h3>Diretor do ITUC</h3>
+	<div class="puc_layout_coluna_4cols_nivelador" id="ituc_equipe">	
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/4168538689240017">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Sérgio Leal Braga</p>
+			<span>Lattes +</span></a>
+		</div>
+
+	</div>
+	
+	<!-- Botão voltar -->
+	<button onclick="javascript:history.back()" class="puc_link_voltar_TAG-BUTTON" title="Voltar">VOLTAR</button>
+	<hr>
+
+	<h3>Coordenadora do Projeto Fabricação Digital</h3>
+	<div class="puc_layout_coluna_4cols_nivelador" id="ituc_equipe">
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/1953231474856958">
+			<img src="../imagens/institucional/equipe/ituc_avatar_mulher.png">
+			<p class="ituc_texto_projetos">Ana Rosa F. de Aguiar Martins</p>
+			<span>Lattes +</span></a>
+		</div>
+
+	</div>
+	
+	<!-- Botão voltar -->
+	<button onclick="javascript:history.back()" class="puc_link_voltar_TAG-BUTTON" title="Voltar">VOLTAR</button>
+	<hr>
+
+	<h3>Gerentes</h3>
+	<div class="puc_layout_coluna_4cols_nivelador" id="ituc_equipe">
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/1846234910272191">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Pedro Paulo Almeida Silva</p>
+			<span>Lattes +</span></a>
+		</div>		
+		
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/0313283109258058">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Adrian Giassone</p>
+			<span>Lattes +</span></a>
+		</div>
+
+		<div class="puc_layout_coluna_4cols_interno none"></div>
+		<div class="puc_layout_coluna_4cols_interno none"></div>
+		
+	</div>
+	
+	<!-- Botão voltar -->
+	<button onclick="javascript:history.back()" class="puc_link_voltar_TAG-BUTTON" title="Voltar">VOLTAR</button>
+	<hr>
+
+	<h3>Assessora de Gestão de Projetos</h3>
+	<div class="puc_layout_coluna_4cols_nivelador" id="ituc_equipe">
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/0245825484490342">
+			<img src="../imagens/institucional/equipe/ituc_avatar_mulher.png">
+			<p class="ituc_texto_projetos">Renata Nohra Chaar Pradelle</p>
+			<span>Lattes +</span></a>
+		</div>
+
+	</div>
+
+	<!-- Botão voltar -->
+	<button onclick="javascript:history.back()" class="puc_link_voltar_TAG-BUTTON" title="Voltar">VOLTAR</button>
+	<hr>
+
+	<h3>Pesquisadores</h3>
+	<div class="puc_layout_coluna_4cols_nivelador" id="ituc_equipe">		
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/3005765541853664">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Epifanio Mamani Ticona</p>
+			<span>Lattes +</span></a>
+		</div>
+		
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/5604855124095327">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Felipe de Castro Gouvea</p>
+			<span>Lattes +</span></a>
+		</div>		
+		
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/2518020830396201">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Fernando Zegarra Sánchez</p>
+			<span>Lattes +</span></a>
+		</div>		
+		
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/4029030907630775">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Flávia de Miranda Gonçalves</p>
+			<span>Lattes +</span></a>
+		</div>
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/0277353927819140">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Florian Pradelle</p>
+			<span>Lattes +</span></a>
+		</div>
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/8258519888260570">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Guilherme Lorenzoni de Almeida</p>
+			<span>Lattes +</span></a>
+		</div>
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/6218618254780556">
+			<img src="../imagens/institucional/equipe/ituc_avatar_mulher.png">
+			<p class="ituc_texto_projetos">Mariana Moraes Gioia</p>
+			<span>Lattes +</span></a>
+		</div>
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/2505270002346121">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Nestor Correa Cotelo</p>
+			<span>Lattes +</span></a>
+		</div>
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/9120723894566280">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">Renan Ferreira Fraga Wanderley</p>
+			<span>Lattes +</span></a>
+		</div>
+
+		<div class="puc_layout_coluna_4cols_interno">
+			<a target="_blank"  href="http://lattes.cnpq.br/6669736292562733">
+			<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+			<p class="ituc_texto_projetos">William de Souza Barbosa</p>
+			<span>Lattes +</span></a>
+		</div>
+
+		<div class="puc_layout_coluna_4cols_interno none"></div>
+		<div class="puc_layout_coluna_4cols_interno none"></div>
+		
+	</div>
+	
+	<!-- Botão voltar -->
+	<button onclick="javascript:history.back()" class="puc_link_voltar_TAG-BUTTON" title="Voltar">VOLTAR</button>
+	<hr>
+
+		<h3>Técnicos</h3>	
+		<div class="puc_layout_coluna_4cols_nivelador" id="ituc_equipe">
+			
+			<div class="puc_layout_coluna_4cols_interno">
+				<a target="_blank"  href="http://lattes.cnpq.br/2464234074860361">
+				<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+				<p class="ituc_texto_projetos">Gilson Coutinho Pradanoff</p>
+				<span>Lattes +</span></a>
+			</div>
+			
+			<div class="puc_layout_coluna_4cols_interno">
+				<a target="_blank"  href="http://lattes.cnpq.br/3771675754354642">
+				<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+				<p class="ituc_texto_projetos">Jorge Ricardo Moura de Souza Junior</p>
+				<span>Lattes +</span></a>
+			</div>
+			
+			<div class="puc_layout_coluna_4cols_interno">
+				<a target="_blank"  href="http://lattes.cnpq.br/0222872022073672">
+				<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+				<p class="ituc_texto_projetos">Lucas Almeida Silva Fernandes</p>
+				<span>Lattes +</span></a>
+			</div>
+			
+			<div class="puc_layout_coluna_4cols_interno none"></div>
+			
+		</div>
+		
+		<!-- Botão voltar -->
+		
+		<button onclick="javascript:history.back()" class="puc_link_voltar_TAG-BUTTON" title="Voltar">VOLTAR</button>
+		
+		<hr>
+		
+		<H3>Administrativos</H3>
+		
+		<div class="puc_layout_coluna_4cols_nivelador" id="ituc_equipe">
+		
+			<div class="puc_layout_coluna_4cols_interno">
+				<a target="_blank"  href="#">
+				<img src="../imagens/institucional/equipe/ituc_avatar_mulher.png">
+				<p class="ituc_texto_projetos">Janaína Dias Tavares Braga</p>
+				<span>Lattes +</span></a>
+			</div>
+	
+			<div class="puc_layout_coluna_4cols_interno">
+				<a target="_blank"  href="http://lattes.cnpq.br/8406839360903623">
+				<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+				<p class="ituc_texto_projetos">Leandro F. da Fonseca Gois</p>
+				<span>Lattes +</span></a>
+			</div>
+
+			<div class="puc_layout_coluna_4cols_interno">
+				<a target="_blank"  href="#">
+				<img src="../imagens/institucional/equipe/ituc_avatar_mulher.png">
+				<p class="ituc_texto_projetos">Lucia Queiroz Abreu</p>
+				<span>Lattes +</span></a>
+			</div>
+	
+			<div class="puc_layout_coluna_4cols_interno">
+				<a target="_blank"  href="#">
+				<img src="../imagens/institucional/equipe/ituc_avatar_homem.png">
+				<p class="ituc_texto_projetos">Luciano Medeiros Pires</p>
+				<span>Lattes +</span></a>
+			</div>
+			
+		</div>
+		
+		<!-- Botão voltar -->
+
+		<button onclick="javascript:history.back()" class="puc_link_voltar_TAG-BUTTON" title="Voltar">VOLTAR</button>
+
+		<hr>
+		
+		
+
+	</article>
+
+
+	<!-- ==================================================================== MEIO > COLUNA LATERAL == -->
+	<!-- ============================================================================================= -->
+	<!-- ============================================================================================= -->
+
+
+	<aside>
+
+		<!-- <p>Veja também:</p>
+		<p>&nbsp;</p> -->
+
+	</aside>
+
+
+	<!-- =============================================================================== FECHA MEIO == -->
+
+
+</section>
+
+
+<!-- =================================================================================== RODAPÉ == -->
+<!-- ============================================================================================= -->
+<!-- ============================================================================================= -->
+
+
+<footer>
+
+	<!-- Rodapé PUC -->
+
+	<div id="ituc_footer">
+		<div id="ituc_infos" class="puc_layout_coluna_3cols_nivelador" style="text-align:center">
+
+			<div class="puc_layout_coluna_3cols_interno">
+				<h5>Instituto Tecnológico da PUC-Rio</h5>
+				<p>Rua Marquês de São Vicente, nº 225,<br>
+				Prédio Pe. José Laércio de Lima. SJ, 4º andar, Gávea - CEP 22451-900<br />
+				Rio de Janeiro - RJ - BRASIL</p>
+			</div>       
+
+			<div class="puc_layout_coluna_3cols_interno">
+				<h5>Horário de Atendimento</h5>
+				<p>Segunda a Sexta-feira:<br>
+				08:00h às 17:30h</p>			
+			</div>
+
+			<div class="puc_layout_coluna_3cols_interno">
+				<h5>Fale conosco</h5>
+				<p>Tel: (21) 3527-1535 / 1536<br>
+				E-mail: ituc@puc-rio.br</p>			
+			</div>
+
+		</div>
+	</div>
+	<iframe src="http://www.puc-rio.br/includes/puc_rodape.html" name="rodape" 
+	title="Rodapé PUC-Rio - endereço e copyright"></iframe>
+
+</footer>
+
+<!-- ============================================================================= FECHA PÁGINA == -->
+
+</body>
+</html>

@@ -1,0 +1,720 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ======================================================================================= FONTES === */
+/* ================================================================================================== */
+/* ================================================================================================== */
+/* ================================================================================================== */
+/* ================================================================================================== */
+
+/* FONTES PUC
+
+'Roboto'
+Opcoes de font-weight: 100 / 300 / 400 / 500 / 700 / 900
+
+'Roboto Condensed'
+Opcoes de font-weight: 300 / 400 / 700 */
+
+/* ========================================================================== ESTILOS PUC > CORES === */
+/* ================================================================================================== */
+/* ================================================================================================== */
+/* ================================================================================================== */
+/* ================================================================================================== */
+
+
+
+/* ESQUEMA DE CORES ESPECIFICOS PARA CADA SITE
+
+   ATENCAO: Elementos em cinza nao se apresentam neste css por serem neutros a qualquer site,
+   mas estes podem ser anulados por estilos que comecam com o nome do id especi­fico para
+   o site em questao, que sera colocado na tag <body> das paginas. */
+
+
+
+
+
+/* ================================================================= TOPO === */
+/* ========================================================================== */
+
+
+/* ----- LOGO DA EMPRESA -----*/
+
+@media (min-width:620px) { #ituc #ituc_cabecalho_logo img { max-height: 100px; } }
+
+@media (max-width:619px) { #ituc #ituc_cabecalho_logo img { max-height: 90px; } }
+
+#ituc #puc_topo_brasao_titulo_caminho { align-items: center; text-align: center; }
+
+
+/* ----- TITULO DA PAGINA ----- */
+
+#ituc header h1 { color:#666666; }
+
+@media screen and (max-width: 511px) {
+	#ituc #puc_topo_titulo_caminho {
+		display: none;
+	}
+
+	#ituc #ituc_cabecalho_logo img {
+		margin-right: 20px !important;
+	}
+
+	#ituc #puc_cabecalho_brasao {
+		margin: 7px 0 0 20px;
+	}
+
+	#ituc #puc_topo_brasao_titulo_caminho {
+		display: flex;
+    	justify-content: center;
+	}
+
+}
+
+/* ----- CAMINHO / BREADCRUMB ----- */
+
+#ituc header nav a:link,
+#ituc header nav a:visited { color:#AAA; }
+
+#ituc header nav a:hover { color:#555; }
+
+
+
+
+
+/* ================================================================= MENU === */
+/* ========================================================================== */
+
+
+
+/* ----- MENU VAZIO (LINHA) ----- */
+
+#ituc header #puc_menu_vazio { background:#E5E5E5; }
+
+
+
+/* ----- MENU COMUM A PARTIR DAQUI ----- */
+
+#ituc #menu a{
+	text-transform: uppercase;
+}
+
+#ituc #menu_labs a{
+	text-transform: none;
+}
+
+/* ------------------------------------- */
+
+
+/* ----- FAIXA QUE ATRAVESSA A PAGINA ----- */
+
+@media (min-width:1140px) {
+
+	#ituc header #puc_menu_faixa { background:transparent;}
+	/* fecha @media (min-width:1140px) */ }
+
+
+/* ----- LINHAS ACIMA E ABAIXO DA FAIXA ----- */
+
+#ituc header #menu span { background:transparent; }
+
+
+/* ----- DESATIVACAO DAS BORDAS GRANDES DOS LINKS NO MENU DESKTOP (ex: CCCI) ----- */
+
+@media (min-width:1140px) {
+
+	#ituc header #menu { margin:1px 10px 0 10px; font: 16px Quicksand; font-weight: 400}
+	#ituc header #menu span { top:0; margin-top:-1px; }
+	#ituc header #menu a:link, 
+	#ituc header #menu a:visited { border-top:0; border-bottom:0; } 
+	/* fecha @media (min-width:1140px) */ }
+
+
+/* ----- MENU DESKTOP - LINKS ----- */
+
+@media (min-width:1140px) {
+
+	/* mouse out */
+	#ituc header #menu a:link,  
+	#ituc header #menu a:visited,
+	#ituc header #menu .puc_menu_submenu_linkmestre { color:#666;}
+
+	/* mouse over */
+	#ituc header #menu a:hover,
+	#ituc header #menu .puc_menu_submenu_linkmestre:hover,
+	#ituc header #menu .puc_menu_submenu_conjunto:hover .puc_menu_submenu_linkmestre {
+		color:rgb(255, 255, 255);
+		background:#d78989;
+		border-color:#b57c7c; }
+/*
+	#ituc #puc_menu_submenu_noticias 	{ width: calc(100% + 0%) !important; } 
+	#ituc #puc_menu_submenu_inf 		{ width: calc(100% + 5%) !important; }
+*/
+	#ituc #puc_menu_submenu_news {
+		width: calc(100% + 30%) !important;
+	}
+
+	#ituc #puc_menu_submenu_labs {
+		width: calc(100% + 40%) !important;
+	}
+		
+	/* fecha @media (min-width:1140px) */ }
+
+
+/* ----- MENU MOBILE - LINKS ----- */
+
+@media (max-width:1139px) {
+
+	/* mouse out */
+	#ituc header #menu a:link, 
+	#ituc header #menu a:visited, 
+	#ituc header #menu .puc_menu_submenu_linkmestre {  
+		color:rgb(255, 255, 255);
+		background:#d78989;
+		border-color:#b57c7c; }
+		
+	/* mouse over */
+	#ituc header #menu a:hover, 
+	#ituc header #menu .puc_menu_submenu_linkmestre:hover,
+	#ituc header #menu .puc_menu_submenu_conjunto:hover .puc_menu_submenu_linkmestre { 
+		/*color:#d78989;*/
+		color:#ffffff;
+		background:#730a0a;
+		border-color:#b57c7c; } 
+	
+	/* fecha @media (max-width:1139px) */ }
+
+
+/* ----- MENU MOBILE - BOTÃƒO "MENU" ----- */
+
+#ituc header button {
+	color:#FFF;
+	background:#b57c7c;
+	background-image:url(http://www.puc-rio.br/imagens/puc_menu_abrefecha.png);
+	background-repeat:no-repeat; }
+
+
+/* ----- SUBMENU DESKTOP ----- */
+
+@media (min-width:1140px) {
+	
+	#ituc header #menu .puc_menu_submenu_links a:link,
+	#ituc header #menu .puc_menu_submenu_links a:visited { 
+		background:#580404; 
+		/*color:#ff9797;*/color:#ffffff; }
+	
+	#ituc header #menu .puc_menu_submenu_links a:hover { 
+		/*color:#ff0000;*/ color:#ffffff;
+		background:#6e1818; }
+	
+	/* fecha @media (min-width:1140px) */ }
+
+
+/* ----- SUBMENU MOBILE ----- */
+
+@media (max-width:1139px) {
+
+	#ituc header #menu .puc_menu_submenu_links a:link, 
+	#ituc header #menu .puc_menu_submenu_links a:visited {
+		border-bottom:1px solid #884646;
+		background:#965b5b;
+		/*color:#ff9797;*/ color:#ffffff;}
+	
+	#ituc header #menu .puc_menu_submenu_links a:hover { 
+		background:#a77373; 
+		/*color:#ff0000;*/
+		color:#ffffff; }
+
+	/* fecha @media (max-width:1139px) */ }
+	
+
+
+
+
+/* ================================================================= MEIO === */
+/* ========================================================================== */
+
+
+
+/* ----- BORDA AO FINAL DO CONTEUDO ----- */
+
+#ituc section { border-bottom-color:#DDDDDD; }
+
+
+
+
+
+/* ============================================= MEIO >> COLUNA PRINCIPAL === */
+/* ========================================================================== */
+
+
+
+/* ----- TITULOS ----- */
+
+#ituc h1 { color:#730a0a; }
+#ituc h2 { color:#730a0a; }
+#ituc h3 { color:#730a0a; }
+#ituc h4 { color:#730a0a; }
+#ituc h5 { color:#744d00; }
+
+
+
+/* ----- TEXTO DESTAQUE EM QUADRO ----- */
+
+#ituc section .puc_texto_destaque_em_quadro_centro, 
+#ituc section .puc_texto_destaque_em_quadro_esquerda, 
+#ituc section .puc_texto_destaque_em_quadro_direita { background:#eee3e3; color:#5b0707; }
+
+
+
+/* ----- LINKS (GERAL) ----- */
+
+#ituc a:link,
+#ituc a:visited { color:#a31212; }
+
+#ituc a:hover   { color:#730a0a; }
+
+
+
+/* ----- LINK VOLTAR ----- */
+
+#ituc section article button.puc_link_voltar_TAG-BUTTON { color:#ffa3a3; background:#c01111; border:1px solid #ec2d2d}
+
+#ituc section article button.puc_link_voltar_TAG-BUTTON:hover { color:#ec2d2d; background:#ffa3a3; }
+
+
+
+/* ----- LINK DESTAQUE ----- */
+
+#ituc section article a.puc_link_destaque_TAG-A:link,
+#ituc section article a.puc_link_destaque_TAG-A:visited,
+#ituc section article a.puc_link_destaque_centralizado_TAG-A:link,
+#ituc section article a.puc_link_destaque_centralizado_TAG-A:visited { background:#e3b4b4; color:#580404; }
+
+#ituc section article a.puc_link_destaque_TAG-A:hover,
+#ituc section article a.puc_link_destaque_centralizado_TAG-A:hover   { background:#580404; color:#FFFFFF; }
+
+
+
+/* ----- LINK DE PAGINACAO ----- */
+
+#ituc section article .puc_link_paginacao_anterior_TAG-A:link,
+#ituc section article .puc_link_paginacao_anterior_TAG-A:visited,
+#ituc section article .puc_link_paginacao_proximo_TAG-A:link,
+#ituc section article .puc_link_paginacao_proximo_TAG-A:visited { color:#a01a1a; }
+
+#ituc section article .puc_link_paginacao_anterior_TAG-A:hover,
+#ituc section article .puc_link_paginacao_proximo_TAG-A:hover   { color:#ff0909; }
+
+
+
+/* ----- GALERIA DE IMAGENS ----- */
+
+/* thumbnails */
+
+#ituc section article .puc_imagem_galeria a:link, 
+#ituc section article .puc_imagem_galeria a:visited { background:#DDDDDD; }
+#ituc section article .puc_imagem_galeria a:hover   { background:#EEEEEE; }
+
+/* legenda dos thumbnails */
+
+#ituc section article .puc_imagem_galeria a:link .puc_texto_menor, 
+#ituc section article .puc_imagem_galeria a:visited .puc_texto_menor,
+#ituc section article .puc_imagem_galeria a figure { 
+	color:#666666; }
+#ituc section article .puc_imagem_galeria a:hover .puc_texto_menor,
+#ituc section article .puc_imagem_galeria a:hover figure { 
+	color:#666666; }
+
+
+
+/* ----- TABELA ----- */
+
+/* bordas da tabela */
+
+#ituc section article .puc_tabela_padrao_TAG-TABLE, 
+#ituc section article .puc_tabela_padrao_TAG-TABLE td { border-color:#CCC; }
+
+/* linhas para tabela */
+
+#ituc section article .puc_tabela_linha_n1_TAG-TR { background:#580404; color:#FFFFFF; }
+#ituc section article .puc_tabela_linha_n2_TAG-TR { background:#d49d9d; color:#580404; }
+#ituc section article .puc_tabela_linha_n3_TAG-TR { background:#e8cdcd; color:#580404; }
+
+#ituc section article .puc_tabela_linha_clara_TAG-TR  { background:#F5F5F5; }
+#ituc section article .puc_tabela_linha_escura_TAG-TR { background:#E5E5E5; }
+
+#ituc section article .puc_tabela_linha_alternada_TAG-TABLE tr:nth-child(odd)  { background:#F5F5F5; }
+#ituc section article .puc_tabela_linha_alternada_TAG-TABLE tr:nth-child(even) { background:#E5E5E5; }
+
+
+
+/* ----- LINHA HORIZONTAL ----- */
+
+#ituc hr { color:#CCC; }
+
+
+
+/* ----- LISTAS ----- */
+
+/* bullet */
+
+#ituc ul li::before { color:#9d0000; }
+
+/* lista destaque */
+
+#ituc section .puc_lista_especial_TAG-UL li::before,
+#ituc section .puc_lista_especial_item_unico_TAG-LI::before { color:#0B5182; }
+
+#ituc section .puc_lista_especial_TAG-UL li,
+#ituc section .puc_lista_especial_item_unico_TAG-LI { color:#0B5182; }
+
+
+
+/* ----- FORMULARIOS ----- */
+
+/* Area do formulario */
+
+#ituc article form { background:#EEE; }
+
+/* campos de preenchimento */
+
+article form input[type=number], article form input[type=text], article form input[type=password], article form input[type=file], article form textarea, article form select {
+    font: 1em Verdana, Geneva, sans-serif;
+    padding: 8px 10px 10px 10px;
+    border: 1px solid;
+    color: #555;
+    width: calc(100% - 22px);
+	transition: border 0.3s, color 0.3s, background 0.3s;}
+
+#ituc article form input[type=number],
+#ituc article form input[type=text],
+#ituc article form input[type=password], 
+#ituc article form input[type=file],
+#ituc article form textarea,
+#ituc article form select { background:#FFF; border-color:#CCC; }
+
+
+/* botao "enviar" */
+
+#ituc article form input[type=submit] { background:#c8c2c2; color:#580404; }
+#ituc article form input[type=submit]:hover { background:#580404; color:#FFF; }
+
+#ituc article form input[type=submit],#ituc article form input[type=button],#ituc article form input[type=reset],
+#ituc section article button.puc_link_voltar_TAG-BUTTON{
+				color:#ffffff;
+				background: #730a0a;
+				border:1px solid #d78989;
+				cursor: pointer;
+}
+#ituc article form input[type=submit]:hover,#ituc article form input[type=button]:hover,#ituc article form input[type=reset]:hover,
+#ituc section article button.puc_link_voltar_TAG-BUTTON:hover{
+				color: rgb(255, 255, 255);
+				background: #aa3535;
+}
+
+/* ----- PLAYER DE AUDIO ----- */
+
+#ituc section div.puc_player_audio_TAG-DIV { background:#e3b4b4; }
+
+#ituc section div.puc_player_audio_TAG-DIV:hover { background:#e78181; }
+
+
+
+/* ----- LINKS REDES SOCIAIS ----- */
+
+#ituc div.puc_links_redes_sociais_TAG-DIV a img { width:40px; height:40px; }
+
+
+
+
+
+/* =============================================== MEIO >> COLUNA LATERAL === */
+/* ========================================================================== */
+
+
+
+/* ----- TITULO ----- */
+
+#ituc section aside .puc_texto_coluna-lateral_titulo { color:#ff0909; }
+
+
+
+/* ----- BANNER DE TEXTO ----- */
+
+#ituc section aside p.puc_texto_coluna-lateral_banner_TAG-P { background:#eee3e3; }
+
+
+
+/* ----- BANNER DE LINK ----- */
+
+#ituc section aside p.puc_texto_coluna-lateral_banner_TAG-P a:link, 
+#ituc section aside p.puc_texto_coluna-lateral_banner_TAG-P a:visited { color:#580404; background:#e3b4b4; }
+
+#ituc section aside p.puc_texto_coluna-lateral_banner_TAG-P a:hover   { background:#db9c9c; }
+
+
+
+
+
+/* ========================================================================== ESTILOS ESPECIFICOS === */
+/* ================================================================================================== */
+/* ================================================================================================== */
+/* ================================================================================================== */
+/* ================================================================================================== */
+
+
+
+/* ----- AQUI ENTRA OS ESTILOS ESPECIFICOS PARA O DEPTO/UNID -----
+Para sobressair qualquer estilo ja existente usar o ID do depto/unid (localizado no body)
+antes do nome da classe/id OU o termo "!important" */
+
+/* ----- MENU ANIMADO PROJETOS ----- */
+
+
+#ituc #ituc_menu_projeto a:link, 
+#ituc #ituc_menu_projeto a:visited {
+	background:#f02020;
+	font:20px "Roboto Condensed";
+	letter-spacing:0.5px;
+	color:#960000;
+	font-weight:bold;
+	display:block;
+	padding:5px 9px 5px 9px; 
+}
+
+#ituc #ituc_menu_projeto a:hover { background:#662583; text-decoration:none; }
+
+
+@media (min-width:680px) {
+
+	#ituc #ituc_menu_projeto {
+		background:#D5D5D5;
+		width:90%;
+		margin:auto;
+		margin-top:50px;
+		margin-bottom:50px;
+		display:flex;
+		justify-content:space-around; 
+	}
+
+	#ituc #ituc_menu_projeto a:link, #ituc #ituc_menu_projeto a:visited { margin:0 5px 0 5px; }
+	#ituc #ituc_menu_projeto a:hover { color: #f02020; background: #710000; border-color: #960000; }
+
+	#ituc .ituc_menu_projeto_link_inclinado1 {
+		transform:rotate(6deg);
+		transition:transform 0.3s, background 0.3s; 
+	}
+
+	#ituc .ituc_menu_projeto_link_inclinado2 {
+		transform:rotate(-6deg);
+		transition:transform 0.3s, background 0.3s; 
+	}
+
+	#ituc .ituc_menu_projeto_link_inclinado2:hover,
+	#ituc .ituc_menu_projeto_link_inclinado1:hover { transform:rotate(0deg); } 
+		
+}	/* fecha @media (min-width:680px) */
+
+
+@media (max-width:679px) {
+
+	#ituc #ituc_menu_projeto a:link, 
+	#ituc #ituc_menu_projeto a:visited {
+		width:calc(100% - 20px);
+		margin-bottom:5px;
+		transition:background 0.3s; 
+	} 
+}	/* fecha @media (max-width:679px) */
+
+.bk_topper {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    left: 0px;
+    z-index: -1;
+    overflow:hidden;
+    margin:0; 
+}
+
+.bk_topper{list-style-type: none; padding: 0 !important; margin: 0!important;}
+
+.bk_topper .background-gradient {
+    background: linear-gradient(to top,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 200px;
+    opacity: 1;
+}
+
+.background-gradient{
+    background: linear-gradient(to top,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 200px;
+	z-index: 1000 !important;
+	text-decoration: none;
+	opacity: 1 !important
+}
+
+/* ----- link de exposicao realizada ----- */
+#ituc section article .ituc_midia_box{ 
+	display:block; 
+	background:#fff; 
+	padding:0; 
+	border-bottom:1px solid gray; 
+}
+
+@media only screen and (max-width: 619px){ 
+
+	#ituc section article .ituc_midia_box{ 
+		border-bottom:3px solid gray; 
+		margin-bottom:20px;
+	} 
+
+}
+
+#ituc section article .ituc_midia_box:after {
+	content:""; 
+	clear:both; 
+	display:block; 
+}
+
+#ituc section article .ituc_midia_box { zoom:1; }
+#ituc section article .ituc_midia_box p:first-child { margin-top:0 }
+
+#ituc section article .ituc_midia_box img{
+	opacity: 1;
+	-moz-transition: opacity 0.15s linear 0s;
+	-ms-transition: opacity 0.15s linear 0s;
+	-o-transition: opacity 0.15s linear 0s;
+	transition: opacity 0.15s linear 0s;
+}
+
+#ituc section article .ituc_midia_box img:hover{ opacity: .5 }
+
+@media (max-width:619px) {
+	#ituc section article .ituc_midia_box img{
+		float:none; 
+		max-width:100%; 
+		margin:0
+	}	
+
+	#ituc section article .ituc_midia_box a {
+		display:block; 
+		text-align:center;
+	}
+}
+
+#ituc footer #ituc_footer{
+	background: #2f3033; 
+	padding: 30px; 
+	display:block
+}
+
+#ituc footer #ituc_infos{
+    max-width: 1100px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+}
+
+#ituc footer #ituc_infos h5 {color:#e2e2e2}
+#ituc footer #ituc_infos p {color:#b9b9b9}
+
+/* --- Estilo padrão --- */
+
+#ituc_apresentacao {
+	margin-top: 40px;
+	text-decoration: none;
+}
+
+#ituc_apresentacao a{
+	text-decoration: none;
+}
+
+#ituc_apresentacao a:hover{
+	color: #730a0a;
+  }
+
+  #ituc_apresentacao .puc_layout_coluna_2cols_interno span {
+	display: block;
+	text-align: right;
+	font-weight: 700;
+	color: #a31212;
+  }
+
+  .ituc_tipo_apresentacao {
+	font-size: 42px;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 46px;
+	margin-top: 0px;
+  }
+
+  .ituc_texto_apresentacao{
+	font: 1.3em Verdana, Geneva, sans-serif;
+	margin: 0;
+	color: #666;
+	text-align: justify;
+  }
+
+  /* --- destaques --- */
+
+  #ituc_destaques div {
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	transition: box-shadow 0.3s ease-in-out;
+  }
+
+  #ituc_destaques div.none {
+	box-shadow: none;
+  }
+
+  #ituc_destaques div:hover {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  }
+  
+  #ituc_destaques div.none:hover {
+	box-shadow:none;
+  }
+	
+  #ituc_destaques div{
+	text-align: center;
+	/*box-shadow: 0 3px 8px #888;*/
+	padding-bottom: 20px;
+	position: relative
+  }
+
+  #ituc_destaques div a:link,
+  #ituc_destaques div a:visited,
+  #ituc_destaques div a:hover{
+	display:block;
+	cursor: pointer;
+	text-decoration: none;
+	color: #555;
+  }
+
+  .ituc_texto_projetos{
+	padding: 0 10px;
+  }
+
+  .ituc_tipo_projetos{
+	display: block;
+	font-family: 'Roboto Condensed';
+	font-size: 2.0em;
+	color: #666;
+	line-height: 1em;
+	margin-top: 20px;
+  }
+
+  #ituc_destaques span {
+	display: block;
+	text-align: right;
+	font-weight: 700;
+	color: #730a0a;
+	position: absolute;
+	bottom: 5px;
+	right: 15px;
+  }
